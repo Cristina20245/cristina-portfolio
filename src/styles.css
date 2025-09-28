@@ -9,3 +9,33 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Basic reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@keyframes flip {
+  0%, 13%    { margin-top: 0; }
+  16%, 29%   { margin-top: -60px; }
+  32%, 45%   { margin-top: -120px; }
+  48%, 61%   { margin-top: -180px; }
+  64%, 77%   { margin-top: -240px; }
+  80%, 93%   { margin-top: -300px; }
+  96%, 100%  { margin-top: -360px; }
+}
+
+#flip {
+  height: 60px;
+}
+
+#flip > div {
+  height: 60px;
+}
+
+.animate-flip {
+  animation: flip 12s infinite ease-in-out;
+}
