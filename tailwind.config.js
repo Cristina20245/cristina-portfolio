@@ -11,10 +11,10 @@ module.exports = {
         quote: ['Caveat', 'cursive']
       },
       colors: {
-        primary: '#1E1CE9',
-        secondary: '#EF6F6C',
+        primary: '#4361ee',
+        secondary: '#f8ad9d',
         light: '#FEFFD6',
-        darkGreen: '#004F29',
+        darkGreen: '#2a9d8f',
         mint: '#C2FFE1'
       }
     },

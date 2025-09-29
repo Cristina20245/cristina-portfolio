@@ -18,23 +18,36 @@ html, body {
 }
 
 
-@keyframes flip {
-  0%, 13%    { margin-top: 0; }
-  16%, 29%   { margin-top: -60px; }
-  32%, 45%   { margin-top: -120px; }
-  48%, 61%   { margin-top: -180px; }
-  64%, 77%   { margin-top: -240px; }
-  80%, 93%   { margin-top: -300px; }
-  96%, 100%  { margin-top: -360px; }
-}
-
 #flip {
-  height: 60px;
+  animation: flip 12s infinite;
 }
 
-#flip > div {
-  height: 60px;
+.flip-line {
+  height: 60px;           /* coincide con el contenedor */
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
 }
+
+@keyframes flip {
+  0%, 16%   { transform: translateY(0); }
+  20%, 36%  { transform: translateY(-60px); }
+  40%, 56%  { transform: translateY(-120px); }
+  60%, 76%  { transform: translateY(-180px); }
+  80%, 96%  { transform: translateY(-240px); }
+  100%      { transform: translateY(-300px); }
+}
+
+
+
+#flip > * {
+  display: block;
+  height: 60px;               /* MISMO alto que h-[60px] del contenedor */
+  line-height: 60px;          /* centra verticalmente */
+  margin: 0;                  /* elimina cualquier margen colapsado */
+  padding: 0;
+}
+
 
 .animate-flip {
   animation: flip 12s infinite ease-in-out;
