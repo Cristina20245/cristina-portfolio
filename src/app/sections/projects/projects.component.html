@@ -1,51 +1,64 @@
-<section class="py-16 px-6 max-w-7xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-12">💻 My Projects</h2>
+<section class="bg-darkGreen py-16 px-6">
+  <h2 class="text-3xl font-bold text-center mb-12 text-light">
+    💻 My Projects
+  </h2>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- una sola columna -->
+  <div class="grid grid-cols-1 gap-12 max-w-3xl mx-auto">
 
     <!-- Coffee App -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col justify-between">
-      <div>
-        <h3 class="text-xl font-semibold mb-2">☕ Coffee App</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Angular app that fetches data from a public coffee API and shows detailed info about each coffee.
-        </p>
-      </div>
+    <div class="bg-secondary rounded-2xl shadow-lg p-6 flex flex-col">
+      <img
+        src="assets/images/coffee-app-preview.png"
+        alt="Coffee App preview"
+        class="w-full h-48 object-cover rounded-xl mb-4"
+      />
+      <h3 class="text-xl font-semibold text-darkGreen mb-2">☕ Coffee App</h3>
+      <p class="text-darkGreen text-sm mb-4">
+        Angular app that fetches data from a public coffee API and shows detailed info about each coffee.
+      </p>
       <div class="mt-auto flex gap-4">
         <a href="https://github.com/Cristina20245/CoffeeApp.git" target="_blank"
-           class="text-sm font-medium text-blue-600 hover:underline">🔗 View Code</a>
+           class="text-sm font-medium text-blue-700 hover:underline">🔗 View Code</a>
         <a href="https://coffee-app-cristina.netlify.app" target="_blank"
-           class="text-sm font-medium text-green-600 hover:underline">🌐 Live Demo</a>
+           class="text-sm font-medium text-green-700 hover:underline">🌐 Live Demo</a>
       </div>
     </div>
 
     <!-- Horse Race Game -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col justify-between">
-      <div>
-        <h3 class="text-xl font-semibold mb-2">🐎 Horse Race Game</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Round-based horse racing game developed with JavaFX and MySQL database integration.
-        </p>
-      </div>
-      <div class="mt-auto">
-        <a href="https://github.com/Cristina20245/horse-race-game-javafx.git" target="_blank"
-           class="text-sm font-medium text-blue-600 hover:underline">🔗 View Code</a>
-      </div>
+    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+      <img
+        src="assets/images/horse-race-preview.png"
+        alt="Horse Race Game preview"
+        class="w-full h-48 object-cover rounded-xl mb-4"
+      />
+      <h3 class="text-xl font-semibold text-darkGreen mb-2">🐎 Horse Race Game</h3>
+      <p class="text-darkGreen text-sm mb-4">
+        Round-based horse racing game developed with JavaFX and MySQL database integration.
+      </p>
+      <a href="https://github.com/Cristina20245/horse-race-game-javafx.git"
+         target="_blank"
+         class="text-sm font-medium text-blue-700 hover:underline mt-auto">🔗 View Code</a>
     </div>
 
     <!-- Breakout Game -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col justify-between">
-      <div>
-        <h3 class="text-xl font-semibold mb-2">🔨 Breakout Game</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-          Classic brick-breaker style game built in Python using the <code>graphics.py</code> library.
-        </p>
-      </div>
-      <div class="mt-auto">
-        <a href="https://github.com/Cristina20245/breakout_game.git" target="_blank"
-           class="text-sm font-medium text-blue-600 hover:underline">🔗 View Code</a>
-      </div>
+    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+      <img
+        src="assets/images/breakout-preview.png"
+        alt="Breakout Game preview"
+        class="w-full h-48 object-cover rounded-xl mb-4"
+      />
+      <h3 class="text-xl font-semibold text-darkGreen mb-2">🔨 Breakout Game</h3>
+      <p class="text-darkGreen text-sm mb-4">
+        Classic brick-breaker style game built in Python using the <code>graphics.py</code> library.
+      </p>
+      <a href="https://github.com/Cristina20245/breakout_game.git"
+         target="_blank"
+         class="text-sm font-medium text-blue-700 hover:underline mt-auto">🔗 View Code</a>
     </div>
 
   </div>
+
+
 </section>
+
