@@ -1,15 +1,13 @@
 <section id="contact" class="relative bg-light py-20 px-6">
   <!-- Curva decorativa rotada 180° -->
   <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
-    <svg class="relative block w-[calc(100%+1.3px)] h-[30px] rotate-180"
+    <svg class="relative block w-[calc(100%+1.3px)] h-[40px] rotate-180"
          xmlns="http://www.w3.org/2000/svg"
          preserveAspectRatio="none"
-         viewBox="0 0 1200 60">
+         viewBox="0 0 1200 120">
       <path d="M0,0 C300,200 900,-150 1200,0 L1200,120 L0,120 Z" fill="#2a9d8f"></path>
-
     </svg>
   </div>
-
 
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-4xl font-heading font-bold mb-4 text-darkGreen">
@@ -34,12 +32,20 @@
       </a>
     </div>
 
-    <!-- formulario Formspree -->
+    <!-- ✅ Mensaje de éxito (oculto por defecto) -->
+    <div id="formSuccess" class="hidden mb-6 text-green-600 text-center font-semibold">
+      ✅ Email sent! Thank you 😊
+    </div>
+
+    <!-- Formulario con redirección y sin CAPTCHA -->
     <form
-      action="https://formspree.io/f/xpwypbgd"
+      action="https://formsubmit.co/cristina.alvarez.f@gmail.com"
       method="POST"
       class="bg-white rounded-2xl shadow-lg p-8 text-left"
     >
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="http://localhost:62047/#contact?sent=true">
+
       <label class="block mb-4">
         <span class="text-darkGreen font-medium">Your email</span>
         <input
@@ -68,5 +74,20 @@
       </button>
     </form>
   </div>
-</section>
 
+  <!-- Script: muestra mensaje si el email fue enviado -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const successBox = document.getElementById("formSuccess");
+      const url = new URL(window.location.href);
+
+      if (url.searchParams.get("sent") === "true") {
+        if (successBox) {
+          successBox.classList.remove("hidden");
+        }
+        alert("✅ Email sent! Thank you 😊");
+        window.history.replaceState(null, "", window.location.pathname + window.location.hash);
+      }
+    });
+  </script>
+</section>
