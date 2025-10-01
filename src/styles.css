@@ -18,37 +18,37 @@ html, body {
 }
 
 
+/* En tu styles.css */
 #flip {
-  animation: flip 12s infinite;
+  animation: flip 14s infinite ease-in-out;
 }
 
 .flip-line {
-  height: 60px;           /* coincide con el contenedor */
+  height: 60px;
   line-height: 60px;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes flip {
-  0%, 16%   { transform: translateY(0); }
-  20%, 36%  { transform: translateY(-60px); }
-  40%, 56%  { transform: translateY(-120px); }
-  60%, 76%  { transform: translateY(-180px); }
-  80%, 96%  { transform: translateY(-240px); }
+  0%, 15%   { transform: translateY(0); }
+  16.66%, 31.66%  { transform: translateY(-60px); }
+  33.33%, 48.33%  { transform: translateY(-120px); }
+  50%, 65%  { transform: translateY(-180px); }
+  66.66%, 81.66%  { transform: translateY(-240px); }
+  83.33%, 98.33%  { transform: translateY(-300px); }
   100%      { transform: translateY(-300px); }
 }
 
-
-
-#flip > * {
-  display: block;
-  height: 60px;               /* MISMO alto que h-[60px] del contenedor */
-  line-height: 60px;          /* centra verticalmente */
-  margin: 0;                  /* elimina cualquier margen colapsado */
-  padding: 0;
+/* Asegurar que el contenedor oculta completamente el overflow */
+.relative.inline-block {
+  overflow: hidden !important;
 }
 
 
 .animate-flip {
-  animation: flip 12s infinite ease-in-out;
+  animation: flip 14s infinite ease-in-out;
 }

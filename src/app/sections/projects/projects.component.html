@@ -1,33 +1,29 @@
 <section class="bg-darkGreen py-16 px-6">
   <h2 class="text-3xl font-bold text-center mb-12 text-light">
-    💻 My Projects
+    ✨ My Projects
   </h2>
 
   <div class="grid grid-cols-1 gap-12 max-w-3xl mx-auto">
 
-
     <!-- Horse Race Game -->
     <div class="bg-secondary rounded-2xl shadow-lg p-6 min-h-[22rem] flex flex-col md:flex-row items-center md:items-start gap-6">
-<img
-  src="assets/images/horse-race-preview.png"
-  alt="Horse Race Game preview"
-  class="w-full md:w-92 h-64 object-cover rounded-xl"
-/>
-
+      <img
+        src="assets/images/horse-race-preview.png"
+        alt="Horse Race Game preview"
+        class="w-full md:w-92 h-64 object-cover rounded-xl"
+      />
       <div class="flex flex-col text-left">
         <h3 class="text-xl font-semibold text-darkGreen mb-2">🐎 Horse Race Game</h3>
-        <p class="text-darkGreen text-base mb-2">
-          Round-based horse racing game built with JavaFX and MySQL.
-
+        <p class="text-darkGreen text-base mb-3">
+          A fun horse racing game where players place bets and watch the action unfold in real-time.
+          I built this to learn how desktop applications work with databases - every race result gets saved to MySQL.
         </p>
-
-                <p class="text-darkGreen text-base mb-2">
-
-          Players can place bets and watch the horses race in real time while the
-          database stores game progress and results.
+        <p class="text-darkGreen text-base mb-4">
+          The biggest challenge was making the JavaFX interface feel lively and keeping the game data in sync.
+          It was my first deep dive into real-time updates.
         </p>
         <p class="text-darkGreen text-sm mb-4">
-          Built with: <span class="font-semibold">Java</span>, <span class="font-semibold">JavaFX</span>, MySQL.
+          Built with: <span class="font-semibold">Java</span>, <span class="font-semibold">JavaFX</span>, <span class="font-semibold">MySQL</span>.
         </p>
         <div class="mt-auto flex flex-col gap-1">
           <a href="https://github.com/Cristina20245/horse-race-game-javafx.git"
@@ -37,80 +33,64 @@
       </div>
     </div>
 
- <!-- Coffee App -->
-<div class="bg-secondary rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center md:items-start gap-6">
-  <img
-    src="assets/images/coffeeapp-preview.png"
-    alt="Coffee App preview"
-    class="w-full md:w-72 h-auto object-cover rounded-xl"
-  />
-  <div class="flex flex-col text-left">
-    <h3 class="text-xl font-semibold text-darkGreen mb-2">☕ Coffee App</h3>
-
-    <p class="text-darkGreen text-base mb-2">
-      This Angular app connects to a public coffee API and displays detailed information about each coffee type.
-    </p>
-
-    <p class="text-darkGreen text-base mb-2">
-      It allows users to browse a menu, and explore different coffee styles — all within a clean, responsive layout.
-    </p>
-
-    <p class="text-darkGreen text-base mb-2">
-      This was one of my first full-stack projects using Angular and TypeScript, and it helped me strengthen my understanding of components, services, and data handling in real-world scenarios.
-    </p>
-
-    <p class="text-darkGreen text-sm mb-4">
-      Built with: <span class="font-semibold">Angular</span>, <span class="font-semibold">TypeScript</span>, HTML, CSS.
-    </p>
-
-    <div class="mt-auto flex flex-col gap-1">
-      <a href="https://github.com/Cristina20245/CoffeeApp.git"
-         target="_blank"
-         class="text-sm font-medium text-blue-700 hover:underline">🔗 View Code</a>
-      <a href="https://coffee-app-cristina.netlify.app"
-         target="_blank"
-         class="text-sm font-medium text-green-700 hover:underline">🌐 Live Demo</a>
+    <!-- Coffee App -->
+    <div class="bg-secondary rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center md:items-start gap-6">
+      <img
+        src="assets/images/coffeeapp-preview.png"
+        alt="Coffee App preview"
+        class="w-full md:w-72 h-auto object-cover rounded-xl"
+      />
+      <div class="flex flex-col text-left">
+        <h3 class="text-xl font-semibold text-darkGreen mb-2">☕ Coffee App</h3>
+        <p class="text-darkGreen text-base mb-3">
+          My first proper Angular app! It connects to a coffee API and shows different brew styles in a clean,
+          responsive layout. Perfect for coffee lovers who enjoy exploring new brews.
+        </p>
+        <p class="text-darkGreen text-base mb-4">
+          This project really helped me understand how components talk to each other and how to handle data from external APIs.
+          I learned to love TypeScript's type safety along the way.
+        </p>
+        <p class="text-darkGreen text-sm mb-4">
+          Built with: <span class="font-semibold">Angular</span>, <span class="font-semibold">TypeScript</span>, HTML, CSS.
+        </p>
+        <div class="mt-auto flex flex-col gap-1">
+          <a href="https://github.com/Cristina20245/CoffeeApp.git"
+             target="_blank"
+             class="text-sm font-medium text-blue-700 hover:underline">🔗 View Code</a>
+          <a href="https://coffee-app-cristina.netlify.app"
+             target="_blank"
+             class="text-sm font-medium text-green-700 hover:underline">🌐 Live Demo</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
 
     <!-- Breakout Game -->
-<!-- Breakout Game -->
-<div class="bg-secondary rounded-2xl shadow-lg p-6 min-h-[22rem] flex flex-col md:flex-row items-center md:items-start gap-6">
-  <img
-    src="assets/images/breakout-preview.png"
-    alt="Breakout Game preview"
-    class="w-full md:w-72 h-auto object-cover rounded-xl"
-  />
-  <div class="flex flex-col text-left">
-    <h3 class="text-xl font-semibold text-darkGreen mb-2">🔨 Breakout Game</h3>
-
-    <p class="text-darkGreen text-base mb-2">
-      Classic brick-breaker game recreated in Python as part of a Stanford University course.
-    </p>
-
-    <p class="text-darkGreen text-base mb-2">
-      This was my first full project using Python and graphics programming. One of the biggest challenges was detecting collisions and handling them efficiently.
-    </p>
-
-    <p class="text-darkGreen text-base mb-2">
-      The game features score tracking and increasing difficulty to keep players engaged.
-    </p>
-
-    <p class="text-darkGreen text-sm mb-4">
-      Built with: <span class="font-semibold">Python</span>, <span class="font-semibold">graphics.py</span>.
-    </p>
-
-    <div class="mt-auto flex flex-col gap-1">
-      <a href="https://github.com/Cristina20245/breakout_game.git"
-         target="_blank"
-         class="text-sm font-medium text-blue-700 hover:underline">🔗 View Code</a>
+    <div class="bg-secondary rounded-2xl shadow-lg p-6 min-h-[22rem] flex flex-col md:flex-row items-center md:items-start gap-6">
+      <img
+        src="assets/images/breakout-preview.png"
+        alt="Breakout Game preview"
+        class="w-full md:w-72 h-auto object-cover rounded-xl"
+      />
+      <div class="flex flex-col text-left">
+        <h3 class="text-xl font-semibold text-darkGreen mb-2">🔨 Breakout Game</h3>
+        <p class="text-darkGreen text-base mb-3">
+          A Python recreation of the classic Breakout game from a Stanford course.
+          It was my first time doing anything with graphics programming - watching those bricks break never gets old!
+        </p>
+        <p class="text-darkGreen text-base mb-4">
+          Getting collision detection right was tricky, but so satisfying once it worked.
+          This project showed me how games manage state and handle user input in real-time.
+        </p>
+        <p class="text-darkGreen text-sm mb-4">
+          Built with: <span class="font-semibold">Python</span>, <span class="font-semibold">graphics.py</span>.
+        </p>
+        <div class="mt-auto flex flex-col gap-1">
+          <a href="https://github.com/Cristina20245/breakout_game.git"
+             target="_blank"
+             class="text-sm font-medium text-blue-700 hover:underline">🔗 View Code</a>
+        </div>
+      </div>
     </div>
+
   </div>
-</div>
-
-
-  </div> <!-- cierre grid -->
-</section> <!-- cierre section -->
+</section>

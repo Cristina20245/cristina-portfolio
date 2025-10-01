@@ -1,35 +1,72 @@
-<section
-  id="about"
-  class="relative bg-mint min-h-[70vh] text-center px-6 py-20"
->
-  <div class="flex flex-col items-center justify-center">
-    <h2 class="text-4xl font-heading text-darkGreen mb-6">About Me</h2>
+<section id="about" class="relative bg-mint min-h-[70vh] px-6 py-20">
+  <div class="max-w-3xl mx-auto"> <!-- Contenedor centrado -->
 
-    <p class="text-lg font-body text-darkGreen max-w-3xl">
-      I'm Cristina, a Junior Web Developer and DAW student based in Spain 🇪🇸.
-      I enjoy creating web apps that mix clean logic and creative design.
-      I’m currently learning full-stack development with Angular, Laravel,
-      and MySQL — and loving the process!
-    </p>
+    <!-- Título centrado -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-heading text-darkGreen">📖 About Me</h2>
+    </div>
 
+    <!-- Todo el contenido alineado a la izquierda pero dentro del contenedor centrado -->
+    <div class="text-left"> <!-- Aquí cambiamos a text-left -->
 
+      <!-- Texto principal -->
+      <p class="text-lg font-body text-darkGreen leading-relaxed mb-10">
+        I'm Cristina — probably one of the few developers who started with MS-DOS at 14, took a detour into tourism,
+        and eventually found my way back to coding, because my heart never really left. I believe in following your passions,
+        even if they take you on the scenic route first.
+      </p>
 
-    <div class="mt-10 text-darkGreen">
-      <h3 class="text-2xl font-heading mb-4">✨ Fun Facts</h3>
-      <ul class="text-left list-disc list-inside font-body">
-        <li>I’m a cat lover 🐱 — if you spot a hidden 🐾 in my code, it’s on purpose!</li>
-        <li>I surf when I can 🌊 — saltwater and wipeouts clears the mind like a fresh git commit.</li>
-        <li>Coffee is my coding fuel ☕ — but I also enjoy fixing things around the house 🔧.</li>
-        <li>Organizing stuff is my therapy — from bookmarks to backup folders 🔍.</li>
-      </ul>
+      <!-- Mi Esencia -->
+      <div class="text-darkGreen mb-10">
+        <h3 class="text-2xl font-heading mb-6 text-center">🌟 My Vibe</h3>
+        <ul class="space-y-4 font-body text-lg leading-relaxed">
+          <li class="flex items-start">
+            <span class="mr-3">🎵</span>
+            <span><strong>Coding soundtrack:</strong> Phoenix, The Strokes, The Smiths & reggae — because good code deserves good music.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3">🐱</span>
+            <span><strong>Traveling cat lover</strong> — my dream is to code remotely from different countries with a cat on my lap.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3">🌊</span>
+            <span><strong>Surf & code balance</strong> — when I'm stuck on a bug, the ocean usually has the solution.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3">🎨</span>
+            <span><strong>CSS enthusiast</strong> — I’ll happily refactor styling three times if ot makes things look better.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="mr-3">💪</span>
+            <span><strong>Stubborn problem-solver</strong> — I don't give up easily, but I'm smart enough to take breaks and come back stronger.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mi Historia Única -->
+      <div class="text-darkGreen mb-16">
+        <h3 class="text-2xl font-heading mb-6 text-center">🚀 My Journey</h3>
+<p class="font-body text-lg leading-relaxed">
+  Whether it was upgrading hardware as a teen or helping travelers navigate new places,
+  I've always loved solving puzzles and making connections. Now I bring that same curiosity
+  to coding — creating digital experiences that work smoothly and feel right to real people.
+</p>
+      </div>
+    </div>
+
+    <!-- Cita CENTRADA -->
+    <div class="text-center">
+      <p class="font-quote text-4xl text-primary leading-relaxed not-italic font-semibold">
+        "The best code comes from people who understand both computers AND humans."
+      </p>
     </div>
   </div>
 
-<!-- Tecnologías -->
-<div class="mt-12 text-center text-darkGreen mb-10">
-  <h3 class="text-2xl font-heading mb-6">Technologies I use</h3>
-<div class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-5 gap-5 place-items-center mx-auto max-w-5xl">
-    <img src="https://cdn.simpleicons.org/html5/f8ad9d" alt="HTML" class="w-12 h-12">
+  <!-- Tecnologías centradas -->
+  <div class="mt-16 text-center text-darkGreen">
+    <h3 class="text-2xl font-heading mb-9 text-center">💻 Technologies I use</h3>
+    <div class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-5 gap-5 place-items-center mx-auto max-w-5xl">
+        <img src="https://cdn.simpleicons.org/html5/f8ad9d" alt="HTML" class="w-12 h-12">
   <img src="https://cdn.simpleicons.org/css/f8ad9d" alt="CSS" class="w-12 h-12">
     <img src="https://cdn.simpleicons.org/javascript/f8ad9d" alt="JavaScript" class="w-12 h-12">
     <img src="https://cdn.simpleicons.org/typescript/f8ad9d" alt="TypeScript" class="w-12 h-12">
@@ -50,18 +87,24 @@
     <img src="https://cdn.simpleicons.org/postman/f8ad9d" alt="Postman" class="w-12 h-12">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <i class="devicon-vscode-plain" style="font-size: 48px; color: #f8ad9d;"></i>
+    </div>
   </div>
-</div>
 
-
-
-
-
-
-  <!-- Curva decorativa entre About y Projects -->
+  <!-- Curva decorativa -->
   <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-[0]">
     <svg class="relative block w-[calc(100%+1.3px)] h-[50px]" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1200 120">
       <path d="M0,0 C150,100 350,-100 600,40 C850,180 1050,-40 1200,60 L1200,120 L0,120 Z" fill="#2a9d8f"></path>
     </svg>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
