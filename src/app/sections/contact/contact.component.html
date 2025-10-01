@@ -1,3 +1,4 @@
+<!-- Contact -->
 <section id="contact" class="relative bg-light py-20 px-6">
   <!-- Curva decorativa rotada 180° -->
   <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
@@ -32,19 +33,15 @@
       </a>
     </div>
 
-    <!-- ✅ Mensaje de éxito (oculto por defecto) -->
-    <div id="formSuccess" class="hidden mb-6 text-green-600 text-center font-semibold">
-      ✅ Email sent! Thank you 😊
-    </div>
-
-    <!-- Formulario con redirección y sin CAPTCHA -->
+    <!-- Formulario -->
     <form
       action="https://formsubmit.co/cristina.alvarez.f@gmail.com"
       method="POST"
       class="bg-white rounded-2xl shadow-lg p-8 text-left"
     >
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="http://localhost:62047/#contact?sent=true">
+      <!-- 🔑 Redirige al HOME con ?sent=true -->
+      <input type="hidden" name="_next" value="https://cristina-portfolio.netlify.app/#home?sent=true">
 
       <label class="block mb-4">
         <span class="text-darkGreen font-medium">Your email</span>
@@ -74,20 +71,17 @@
       </button>
     </form>
   </div>
-
-  <!-- Script: muestra mensaje si el email fue enviado -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const successBox = document.getElementById("formSuccess");
-      const url = new URL(window.location.href);
-
-      if (url.searchParams.get("sent") === "true") {
-        if (successBox) {
-          successBox.classList.remove("hidden");
-        }
-        alert("✅ Email sent! Thank you 😊");
-        window.history.replaceState(null, "", window.location.pathname + window.location.hash);
-      }
-    });
-  </script>
 </section>
+
+<!-- Script global: mensaje en Home -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const url = new URL(window.location.href);
+
+    if (url.searchParams.get("sent") === "true") {
+      alert("✅ Email sent! Thank you 😊");
+      // Limpia la URL para que no se repita al recargar
+      window.history.replaceState(null, "", window.location.pathname + window.location.hash);
+    }
+  });
+</script>
