@@ -1,130 +1,60 @@
-<!-- Contact -->
-<section id="contact" class="relative bg-light py-20 px-6">
-  <!-- Curva decorativa rotada 180° -->
-  <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
-    <svg class="relative block w-[calc(100%+1.3px)] h-[40px] rotate-180"
-         xmlns="http://www.w3.org/2000/svg"
-         preserveAspectRatio="none"
-         viewBox="0 0 1200 120">
-      <path d="M0,0 C300,200 900,-150 1200,0 L1200,120 L0,120 Z" fill="#2a9d8f"></path>
-    </svg>
-  </div>
+<!-- En el formulario, cambia esta línea: -->
+<input type="hidden" name="_next" value="https://cristina-portfolio.netlify.app/?sent=true#contact">
 
-  <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-4xl font-heading font-bold mb-4 text-darkGreen">
-      📬 Let's Chat!
-    </h2>
-
-    <p class="text-darkGreen text-lg mb-10">
-      Got an idea for a project or just want to talk tech?<br>
-      I'd love to hear from you - drop me a message below or connect on LinkedIn.
-    </p>
-
-    <!-- enlaces directos -->
-    <div class="flex justify-center gap-6 mb-12">
-      <a href="mailto:cristina.alvarez.f@gmail.com"
-         class="flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-full shadow-md hover:bg-blue-700 transition">
-        ✉️ Email Me
-      </a>
-      <a href="https://www.linkedin.com/in/cristina-alvarez-f"
-         target="_blank"
-         class="flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
-        🔗 LinkedIn
-      </a>
-    </div>
-
-    <!-- Formulario -->
-    <form
-      action="https://formsubmit.co/cristina.alvarez.f@gmail.com"
-      method="POST"
-      class="bg-white rounded-2xl shadow-lg p-8 text-left"
-      id="contactForm"
-    >
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New message from your portfolio!">
-      <input type="hidden" name="_template" value="table">
-
-      <!-- Redirige al HOME con parámetro -->
-      <input type="hidden" name="_next" value="https://cristina-portfolio.netlify.app/?sent=true#contact">
-
-      <label class="block mb-4">
-        <span class="text-darkGreen font-medium">Your email</span>
-        <input
-          type="email"
-          name="email"
-          required
-          class="mt-1 w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="your.email@example.com"
-        />
-      </label>
-
-      <label class="block mb-6">
-        <span class="text-darkGreen font-medium">What's on your mind?</span>
-        <textarea
-          name="message"
-          rows="4"
-          required
-          class="mt-1 w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="Hey Cristina, I'd love to talk about..."
-        ></textarea>
-      </label>
-
-      <button
-        type="submit"
-        class="bg-primary text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition w-full font-semibold"
-      >
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
-
-<!-- Mejora del script para mostrar mensaje elegante -->
+<!-- Y actualiza el script completo a: -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Verificar si viene de un envío exitoso
+    checkForSuccessMessage();
+
+    // También verificar cuando cambia la URL (para redirecciones de FormSubmit)
+    window.addEventListener('load', checkForSuccessMessage);
+  });
+
+  function checkForSuccessMessage() {
     const url = new URL(window.location.href);
 
     if (url.searchParams.get("sent") === "true") {
-      // Crear notificación elegante en lugar de alert
-      const notification = document.createElement('div');
-      notification.innerHTML = `
-        <div class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in">
-          <div class="flex items-center gap-2">
-            <span>✅</span>
-            <span>Message sent! I'll get back to you soon 😊</span>
-          </div>
-        </div>
-      `;
-      document.body.appendChild(notification);
-
-      // Remover después de 5 segundos
+      // Pequeño delay para asegurar que la página está cargada
       setTimeout(() => {
-        notification.remove();
-      }, 5000);
-
-      // Limpia la URL
-      window.history.replaceState(null, "", window.location.pathname + window.location.hash);
+        showSuccessMessage();
+      }, 100);
     }
+  }
 
-    // Mejorar el formulario
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function() {
-        // Cambiar texto del botón mientras se envía
-        const submitBtn = this.querySelector('button[type="submit"]');
-        submitBtn.innerHTML = 'Sending...';
-        submitBtn.disabled = true;
-      });
-    }
-  });
+  function showSuccessMessage() {
+    // Verificar si ya existe una notificación
+    if (document.querySelector('.email-success-notification')) return;
+
+    const notification = document.createElement('div');
+    notification.className = 'email-success-notification';
+    notification.innerHTML = `
+      <div class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in">
+        <div class="flex items-center gap-2">
+          <span>✅</span>
+          <span>¡Message sent! Thank you 😊 I'll get back to you soon.</span>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(notification);
+
+    // Remover después de 5 segundos
+    setTimeout(() => {
+      notification.remove();
+    }, 5000);
+
+    // Limpia la URL sin recargar
+    const cleanUrl = window.location.pathname + window.location.hash;
+    window.history.replaceState(null, "", cleanUrl);
+  }
 </script>
 
 <style>
   @keyframes fade-in {
-    from { opacity: 0; transform: translateY(-10px); }
+    from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
   }
   .animate-fade-in {
-    animation: fade-in 0.3s ease-out;
+    animation: fade-in 0.5s ease-out;
   }
 </style>
