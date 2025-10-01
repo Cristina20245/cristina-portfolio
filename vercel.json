@@ -1,5 +1,8 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "builds": [
+    { "src": "package.json", "use": "@vercel/angular" }
+  ],
+  "routes": [
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
