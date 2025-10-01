@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/dist/cristina-portfolio/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
