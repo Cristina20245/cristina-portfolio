@@ -24,38 +24,73 @@ html, body {
   box-sizing: border-box;
 }
 
+/* SOLUCIÓN DEFINITIVA */
+.relative.inline-block {
+  overflow: hidden !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  vertical-align: middle;
+}
 
-/* En tu styles.css */
 #flip {
   animation: flip 14s infinite ease-in-out;
+  position: relative;
+  top: -0.5px; /* Corregido -5,9px a -0.5px */
 }
 
 .flip-line {
-  height: 60px;
-  line-height: 60px;
+  height: 61px;
+  line-height: 1.2;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transform: translateZ(0);
+  /* TAMAÑO DE LETRA AUMENTADO */
+  font-size: 2rem; /* Aumentado para compensar altura reducida */
+
 }
 
 @keyframes flip {
   0%, 15%   { transform: translateY(0); }
-  16.66%, 31.66%  { transform: translateY(-60px); }
-  33.33%, 48.33%  { transform: translateY(-120px); }
-  50%, 65%  { transform: translateY(-180px); }
-  66.66%, 81.66%  { transform: translateY(-240px); }
-  83.33%, 98.33%  { transform: translateY(-300px); }
-  100%      { transform: translateY(-300px); }
+  16.66%, 31.66%  { transform: translateY(-61px); }
+  33.33%, 48.33%  { transform: translateY(-122px); }
+  50%, 65%  { transform: translateY(-183px); }
+  66.66%, 81.66%  { transform: translateY(-244px); }
+  83.33%, 98.33%  { transform: translateY(-305px); }
+  100%      { transform: translateY(-305px); }
 }
 
-/* Asegurar que el contenedor oculta completamente el overflow */
-.relative.inline-block {
-  overflow: hidden !important;
+/* Móvil */
+@media (max-width: 768px) {
+  .relative.inline-block {
+    min-width: 260px;
+    height: 61px !important;
+  }
+
+  .flip-line {
+    font-size: 1.5rem; /* Tamaño aumentado para móvil */
+    padding: 0 5px;
+  }
 }
 
+.flex.items-center.justify-center.flex-wrap.gap-2 {
+  align-items: baseline; /* o 'center' */
+}
 
-.animate-flip {
-  animation: flip 14s infinite ease-in-out;
+@media (max-width: 768px) {
+  .container.mx-auto.flex.flex-wrap {
+    gap: 1rem 0.5rem !important; /* 1rem vertical, 0.5rem horizontal */
+  }
+
+  .container.mx-auto.flex.flex-wrap a {
+    font-size: 0.95rem;
+    padding: 0.25rem 0.5rem;
+  }
 }
