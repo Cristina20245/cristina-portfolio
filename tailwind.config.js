@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Poppins', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        body: ['Nunito', 'sans-serif'],
+        heading: ['Nunito', 'sans-serif'],
         quote: ['Caveat', 'cursive']
       },
       colors: {

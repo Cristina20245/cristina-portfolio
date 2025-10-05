@@ -7,6 +7,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Figtree:wght@400;500&family=Caveat&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Caveat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Caveat&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Caveat&display=swap');
+
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -86,11 +94,11 @@ html, body {
 
 @media (max-width: 768px) {
   .container.mx-auto.flex.flex-wrap {
-    gap: 1rem 0.5rem !important; /* 1rem vertical, 0.5rem horizontal */
+    gap: 0.75rem !important; /* Menos espacio */
   }
 
   .container.mx-auto.flex.flex-wrap a {
-    font-size: 0.95rem;
-    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem !important; /* Texto más pequeño */
+    white-space: nowrap; /* Evita saltos de línea */
   }
 }
