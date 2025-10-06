@@ -94,9 +94,3 @@ html, body {
   }
 }
 
-.tropical-border {
-  border-bottom: 15px solid transparent;
-  border-image: url('data:image/svg+xml,<svg...') 30 round;
-  /* Patrón de hojas tropicales */
-}
-

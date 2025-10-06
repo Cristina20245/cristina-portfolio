@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['JetBrains Mono', 'monospace'],  // ✅ CORREGIDO
+        heading: ['JetBrains Mono', 'monospace'],
         quote: ['Caveat', 'cursive']
       },
       colors: {
@@ -18,7 +18,6 @@ module.exports = {
         charcoal: '#332e2e',
         emerald: '#10b981',
         white: '#ffffff',
-        orange: '#f97316',
         slate: '#64748b',
       }
     },

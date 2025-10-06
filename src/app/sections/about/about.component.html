@@ -1,20 +1,32 @@
 <section id="about" class="relative bg-mint min-h-[70vh] px-6 py-16">
-  <div class="max-w-3xl mx-auto"> <!-- Centered container -->
+  <div class="max-w-3xl mx-auto">
 
     <!-- Centered title -->
     <div class="text-center mb-12">
       <h2 class="text-4xl font-heading text-charcoal">About Me</h2>
     </div>
 
-    <!-- Left-aligned content within centered container -->
-    <div class="text-left">
+    <!-- Photo + Text side by side - REVERSED ORDER -->
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-10">
+      <!-- Main text - FIRST on mobile and desktop -->
+      <div class="flex-1 text-left">
+        <p class="text-lg font-body text-charcoal leading-relaxed">
+          Probably one of the few developers who started with MS-DOS at 14, took a detour into tourism,
+          and eventually found my way back to coding, because my heart never really left. <br><br>I believe in following your passions,
+          even if they take you on the scenic route first.
+        </p>
+      </div>
 
-      <!-- Main text -->
-      <p class="text-lg font-body text-charcoal leading-relaxed mb-10">
-        Probably one of the few developers who started with MS-DOS at 14, took a detour into tourism,
-        and eventually found my way back to coding, because my heart never really left. I believe in following your passions,
-        even if they take you on the scenic route first.
-      </p>
+      <!-- Photo - SECOND on mobile and desktop -->
+      <div class="flex-shrink-0">
+        <img
+          src="assets/images/photo.png"
+          alt="Cristina Álvarez"
+          class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg"
+        >
+      </div>
+    </div>
+
 
       <!-- My Vibe section -->
       <div class="text-charcoal mb-10">
@@ -60,7 +72,7 @@
         "The best code comes from people who understand both computers AND humans."
       </p>
     </div>
-  </div>
+
 
   <!-- Divider line -->
   <div class="max-w-3xl mx-auto mt-12 mb-16">
