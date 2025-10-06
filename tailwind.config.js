@@ -6,16 +6,20 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Nunito', 'sans-serif'],
-        heading: ['Nunito', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['JetBrains Mono', 'monospace'],  // ✅ CORREGIDO
         quote: ['Caveat', 'cursive']
       },
       colors: {
-        primary: '#4361ee',
+        primary: '#332e2e',
         secondary: '#f8ad9d',
-        light: '#FEFFD6',
-        darkGreen: '#2a9d8f',
-        mint: '#C2FFE1'
+        mint: '#C2FFE1',
+        cream: '#fef7ed',
+        charcoal: '#332e2e',
+        emerald: '#10b981',
+        white: '#ffffff',
+        orange: '#f97316',
+        slate: '#64748b',
       }
     },
   },
