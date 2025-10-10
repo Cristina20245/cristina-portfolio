@@ -2,58 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* AÑADE esto: */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Caveat&display=swap');
 
-/* Smooth scrolling */
+/* Smooth scrolling para navegación suave */
 html {
   scroll-behavior: smooth;
 }
 
-/* scroll margin top */
+/* Ajuste de scroll para navegación con anclas */
 [id] {
-  scroll-margin-top:2rem;
+  scroll-margin-top: 2rem;
 }
 
-/* Basic reset */
-html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* SOLUCIÓN DEFINITIVA */
-.relative.inline-block {
-  overflow: hidden !important;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000;
-  margin-top: -1px;
-  margin-bottom: -1px;
-  vertical-align: middle;
-}
-
+/* Animación flip para el texto rotatorio en el hero */
 #flip {
   animation: flip 14s infinite ease-in-out;
   position: relative;
-  top: -0.5px; /* Corregido -5,9px a -0.5px */
+  top: -0.5px;
 }
 
 .flip-line {
   height: 61px;
   line-height: 1.2;
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  box-sizing: border-box;
-  transform: translateZ(0);
-  /* TAMAÑO DE LETRA AUMENTADO */
-  font-size: 2rem; /* Aumentado para compensar altura reducida */
-
+  font-size: 2rem;
 }
 
 @keyframes flip {
@@ -66,31 +41,20 @@ html, body {
   100%      { transform: translateY(-305px); }
 }
 
-/* Móvil */
+/* Ajustes para móvil */
 @media (max-width: 768px) {
-  .relative.inline-block {
-    min-width: 260px;
-    height: 61px !important;
-  }
-
   .flip-line {
-    font-size: 1.5rem; /* Tamaño aumentado para móvil */
+    font-size: 1.5rem;
     padding: 0 5px;
   }
-}
 
-.flex.items-center.justify-center.flex-wrap.gap-2 {
-  align-items: baseline; /* o 'center' */
-}
-
-@media (max-width: 768px) {
+  /* Navbar más compacto en móvil */
   .container.mx-auto.flex.flex-wrap {
-    gap: 0.75rem !important; /* Menos espacio */
+    gap: 0.75rem !important;
   }
 
   .container.mx-auto.flex.flex-wrap a {
-    font-size: 0.9rem !important; /* Texto más pequeño */
-    white-space: nowrap; /* Evita saltos de línea */
+    font-size: 0.9rem !important;
+    white-space: nowrap;
   }
 }
-

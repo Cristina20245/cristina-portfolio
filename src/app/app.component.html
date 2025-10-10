@@ -3,10 +3,9 @@
   (click)="toggleLanguage()"
   class="fixed top-2 right-1 bg-cream text-charcoal rounded-full shadow-md border border-charcoal/30 z-[100] text-xs px-2 py-1 md:top-4 md:px-4 md:py-2 md:text-base md:right-4"
 >
-  {{ currentLang === 'en' ? 'ES' : 'EN' }}
+  {{ translationService.getCurrentLang() === 'en' ? 'ES' : 'EN' }}
 </button>
 
-<!-- Resto de tu contenido -->
 <app-navbar></app-navbar>
 <main class="pt-5">
   <section id="home" ><app-home></app-home></section>

@@ -1,12 +1,22 @@
 <footer class="bg-primary text-white py-7 text-center">
   <p class="text-sm">
-    © {{ currentYear }} Made with ❤️ by Cristina — Portfolio personal
+    © {{ currentYear }} {{ translationService.getText('footerText') }}
   </p>
   <div class="mt-2">
-    <a href="https://github.com/Cristina20245" target="_blank" class="hover:underline text-sm mx-2">GitHub</a>
-    <a href="https://www.linkedin.com/in/cristina-alvarez-f" target="_blank" class="hover:underline text-sm mx-2">LinkedIn</a>
-    <a href="assets/cv/CV_Cristina_Alvarez.pdf" target="_blank" class="hover:underline text-sm mx-2">CV</a>
-    <a href="https://cristina.hashnode.dev" target="_blank" class="hover:underline text-sm mx-2">Blog</a>
-    <a href="/privacy.html" class="hover:underline text-sm mx-2">Privacy Policy</a>
+    <a href="https://github.com/Cristina20245" target="_blank" class="hover:underline text-sm mx-2">
+      {{ translationService.getText('github') }}
+    </a>
+    <a href="https://www.linkedin.com/in/cristina-alvarez-f" target="_blank" class="hover:underline text-sm mx-2">
+      {{ translationService.getText('linkedin') }}
+    </a>
+    <a href="assets/cv/CV_Cristina_Alvarez.pdf" target="_blank" class="hover:underline text-sm mx-2">
+      {{ translationService.getText('cv') }}
+    </a>
+    <a href="https://cristina.hashnode.dev" target="_blank" class="hover:underline text-sm mx-2">
+      {{ translationService.getText('blog') }}
+    </a>
+    <a href="/privacy.html" target="_blank" class="hover:underline text-sm mx-2">
+      {{ translationService.getText('privacyPolicy') }}
+    </a>
   </div>
 </footer>

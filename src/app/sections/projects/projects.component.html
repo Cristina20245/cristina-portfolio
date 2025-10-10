@@ -1,12 +1,11 @@
 <section class="bg-cream py-16 px-6 relative">
   <!-- Centered title -->
   <div class="text-center mb-12">
-    <h2 class="text-4xl font-body text-charcoal">My Projects</h2>
+    <h2 class="text-4xl font-body text-charcoal">{{ translationService.getText('projectsTitle') }}</h2>
   </div>
 
   <!-- Main container with max width -->
   <div class="max-w-6xl mx-auto">
-
     <div class="grid grid-cols-1 gap-12 max-w-3xl mx-auto">
 
       <!-- Horse Race Game project -->
@@ -17,22 +16,20 @@
           class="w-full md:w-72 h-auto object-cover rounded-xl"
         />
         <div class="flex flex-col text-left">
-          <h3 class="text-xl font-semibold font-heading text-charcoal mb-2">Horse Race Game</h3>
+          <h3 class="text-xl font-semibold font-heading text-charcoal mb-2">{{ translationService.getText('horseRaceTitle') }}</h3>
           <p class="text-charcoal text-base font-body mb-3">
-            A fun horse racing game where players place bets and watch the action unfold in real-time.
-            I built this to learn how desktop applications work with databases - every race result gets saved to MySQL.
+            {{ translationService.getText('horseRaceDescription') }}
           </p>
           <p class="text-charcoal text-base mb-4">
-            The biggest challenge was making the JavaFX interface feel lively and keeping the game data in sync.
-            It was my first deep dive into real-time updates.
+            {{ translationService.getText('horseRaceChallenge') }}
           </p>
           <p class="text-charcoal text-sm mb-4">
-            Built with: <span class="font-semibold">Java</span>, <span class="font-semibold">JavaFX</span>, <span class="font-semibold">MySQL</span>.
+            {{ translationService.getText('horseRaceTech') }}
           </p>
           <div class="mt-auto flex flex-col gap-1">
             <a href="https://github.com/Cristina20245/horse-race-game-javafx.git"
                target="_blank"
-               class="text-sm font-medium text-primary hover:underline">🔗 View Code</a>
+               class="text-sm font-medium text-primary hover:underline">{{ translationService.getText('viewCode') }}</a>
           </div>
         </div>
       </div>
@@ -45,25 +42,23 @@
           class="w-full md:w-72 h-auto object-cover rounded-xl"
         />
         <div class="flex flex-col text-left">
-          <h3 class="text-xl font-semibold font-heading text-charcoal mb-2">Coffee App</h3>
+          <h3 class="text-xl font-semibold font-heading text-charcoal mb-2">{{ translationService.getText('coffeeAppTitle') }}</h3>
           <p class="text-charcoal text-base font-body mb-3">
-            My first proper Angular app! It connects to a coffee API and shows different brew styles in a clean,
-            responsive layout. Perfect for coffee lovers who enjoy exploring new brews.
+            {{ translationService.getText('coffeeAppDescription') }}
           </p>
           <p class="text-charcoal text-base mb-4">
-            This project really helped me understand how components talk to each other and how to handle data from external APIs.
-            I learned to love TypeScript's type safety along the way.
+            {{ translationService.getText('coffeeAppChallenge') }}
           </p>
           <p class="text-charcoal text-sm mb-4">
-            Built with: <span class="font-semibold">Angular</span>, <span class="font-semibold">TypeScript</span>, HTML, CSS.
+            {{ translationService.getText('coffeeAppTech') }}
           </p>
           <div class="mt-auto flex flex-col gap-1">
             <a href="https://github.com/Cristina20245/CoffeeApp.git"
                target="_blank"
-               class="text-sm font-medium text-charcoal hover:underline">🔗 View Code</a>
+               class="text-sm font-medium text-charcoal hover:underline">{{ translationService.getText('viewCode') }}</a>
             <a href="https://coffee-app-cristina.netlify.app"
                target="_blank"
-               class="text-sm font-medium text-charcoal hover:underline">🌐 Live Demo</a>
+               class="text-sm font-medium text-charcoal hover:underline">{{ translationService.getText('liveDemo') }}</a>
           </div>
         </div>
       </div>
@@ -76,22 +71,20 @@
           class="w-full md:w-72 h-auto object-cover rounded-xl"
         />
         <div class="flex flex-col text-left">
-          <h3 class="text-xl font-semibold font-heading text-charcoal mb-2">Breakout Game</h3>
+          <h3 class="text-xl font-semibold font-heading text-charcoal mb-2">{{ translationService.getText('breakoutTitle') }}</h3>
           <p class="text-charcoal text-base font-body mb-3">
-            A Python recreation of the classic Breakout game from a Stanford course.
-            It was my first time doing anything with graphics programming - watching those bricks break never gets old!
+            {{ translationService.getText('breakoutDescription') }}
           </p>
           <p class="text-charcoal text-base mb-4">
-            Getting collision detection right was tricky, but so satisfying once it worked.
-            This project showed me how games manage state and handle user input in real-time.
+            {{ translationService.getText('breakoutChallenge') }}
           </p>
           <p class="text-charcoal text-sm mb-4">
-            Built with: <span class="font-semibold">Python</span>, <span class="font-semibold">graphics.py</span>.
+            {{ translationService.getText('breakoutTech') }}
           </p>
           <div class="mt-auto flex flex-col gap-1">
             <a href="https://github.com/Cristina20245/breakout_game.git"
                target="_blank"
-               class="text-sm font-medium text-charcoal hover:underline">🔗 View Code</a>
+               class="text-sm font-medium text-charcoal hover:underline">{{ translationService.getText('viewCode') }}</a>
           </div>
         </div>
       </div>

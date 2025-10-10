@@ -6,7 +6,7 @@ import { AboutComponent } from './sections/about/about.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { englishTexts, spanishTexts } from './texts';
+import { TranslationService } from './services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -18,13 +18,11 @@ import { englishTexts, spanishTexts } from './texts';
 export class AppComponent {
   title = 'cristina-portfolio';
 
-  currentLang = 'en';
+  constructor(public translationService: TranslationService) {}
 
   toggleLanguage() {
-    this.currentLang = this.currentLang === 'en' ? 'es' : 'en';
+    const newLang = this.translationService.getCurrentLang() === 'en' ? 'es' : 'en';
+    this.translationService.setLanguage(newLang);
   }
 
-  get text() {
-    return this.currentLang === 'en' ? englishTexts : spanishTexts;
-  }
 }
