@@ -23,29 +23,29 @@
       </div>
     </div>
 
-    <!-- My Vibe section -->
+        <!-- My Vibe section -->
     <div class="text-charcoal mb-10">
       <h3 class="text-2xl font-heading mb-6 text-center">{{ translationService.getText('myVibeTitle') }}</h3>
       <ul class="space-y-4 font-body text-lg leading-relaxed">
         <li class="flex items-start">
           <span class="mr-3">🎵</span>
-          <span><strong>{{ translationService.getText('vibeMusic').split(':')[0] }}:</strong> {{ translationService.getText('vibeMusic').split(':')[1] }}</span>
+          <span [innerHTML]="'<strong>' + translationService.getText('vibeMusic').split(':')[0] + ':</strong>' + translationService.getText('vibeMusic').split(':')[1]"></span>
         </li>
         <li class="flex items-start">
           <span class="mr-3">🌊</span>
-          <span>{{ translationService.getText('vibeSurf') }}</span>
+          <span [innerHTML]="'<strong>' + translationService.getText('vibeSurf').split('—')[0] + '</strong> —' + translationService.getText('vibeSurf').split('—')[1]"></span>
         </li>
         <li class="flex items-start">
           <span class="mr-3">🎨</span>
-          <span>{{ translationService.getText('vibeCSS') }}</span>
+          <span [innerHTML]="'<strong>' + translationService.getText('vibeCSS').split('—')[0] + '</strong> —' + translationService.getText('vibeCSS').split('—')[1]"></span>
         </li>
         <li class="flex items-start">
           <span class="mr-3">💪</span>
-          <span>{{ translationService.getText('vibeProblem') }}</span>
+          <span [innerHTML]="'<strong>' + translationService.getText('vibeProblem').split('—')[0] + '</strong> —' + translationService.getText('vibeProblem').split('—')[1]"></span>
         </li>
         <li class="flex items-start">
           <span class="mr-3">🎒</span>
-          <span>{{ translationService.getText('vibeExplore') }}</span>
+          <span [innerHTML]="'<strong>' + translationService.getText('vibeExplore').split('—')[0] + '</strong> —' + translationService.getText('vibeExplore').split('—')[1]"></span>
         </li>
       </ul>
     </div>

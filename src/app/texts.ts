@@ -5,7 +5,7 @@ export const englishTexts = {
   navContact: "contact",
   navBlog: "blog",
   heroDescription: "Hi there! I'm Cristina — a curious web developer always learning, building, and having fun with code.",
-flipCoffee: "coffee into code ☕",
+  flipCoffee: "coffee into code ☕",
   flipIdeas: "ideas into apps 💡",
   flipBugs: "bugs into features 🐞",
   flipChaos: "chaos into components 🧩",
