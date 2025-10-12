@@ -4,10 +4,10 @@
     {{ translationService.getText('heroDescription') }}
   </p>
 
-  <!-- Animated flip text -->
+  <!-- Animated flip text - CORREGIDA ALINEACIÓN -->
   <h1 class="text-4xl md:text-6xl font-heading text-charcoal mb-6">
-    <span class="flex items-center justify-center flex-wrap gap-2">
-      <span>{{ translationService.getText('flipPrefix') }}</span>
+    <span class="flex items-baseline justify-center flex-wrap gap-2">
+      <span class="align-baseline">{{ translationService.getText('flipPrefix') }}</span>
       <span class="relative inline-block h-[62px] overflow-hidden align-middle">
         <span id="flip" class="block animate-flip text-primary">
           <div class="flip-line flex items-center justify-center">{{ translationService.getText('flipCoffee') }}</div>
