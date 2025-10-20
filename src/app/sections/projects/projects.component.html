@@ -89,6 +89,36 @@
         </div>
       </div>
 
+      <!-- Calculator project -->
+      <div class="bg-mint rounded-2xl shadow-lg p-6 min-h-[22rem] flex flex-col md:flex-row items-center md:items-start gap-6">
+        <img
+          src="assets/images/calculator-preview.png"
+          alt="Calculator preview"
+          class="w-full md:w-72 h-auto object-cover rounded-xl"
+        />
+        <div class="flex flex-col text-left">
+          <h3 class="text-xl font-semibold font-heading text-charcoal mb-2">{{ translationService.getText('calculatorTitle') }}</h3>
+          <p class="text-charcoal text-base font-body mb-3">
+            {{ translationService.getText('calculatorDescription') }}
+          </p>
+          <p class="text-charcoal text-base mb-4">
+            {{ translationService.getText('calculatorChallenge') }}
+          </p>
+          <p class="text-charcoal text-sm mb-4">
+            {{ translationService.getText('calculatorTech') }}
+          </p>
+          <div class="mt-auto flex flex-col gap-1">
+            <a href="https://github.com/Cristina20245/calculator.git"
+              target="_blank"
+              class="text-sm font-medium text-charcoal hover:underline">{{ translationService.getText('viewCode') }}</a>
+            <a href="https://pi-x-calculator.netlify.app"
+              target="_blank"
+              class="text-sm font-medium text-charcoal hover:underline">{{ translationService.getText('liveDemo') }}</a>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 

@@ -49,6 +49,12 @@ export const englishTexts = {
   breakoutChallenge: "Getting collision detection right was tricky, but so satisfying once it worked. This project showed me how games manage state and handle user input in real-time.",
   breakoutTech: "Built with: Python, graphics.py.",
 
+  // Calculator
+  calculatorTitle: 'Calculator',
+  calculatorDescription: 'A simple and modern calculator built with HTML, CSS, and JavaScript.',
+  calculatorChallenge: 'Challenge: apply logic, floating point operations, keyboard input and a clean UI.',
+  calculatorTech: 'Tech: HTML, CSS, JavaScript, Netlify',
+
   contactDescription: "Got an idea for a project or just want to talk tech?<br>I'd love to hear from you - drop me a message below or connect on LinkedIn.",
   emailButton: "✉️ Email Me",
   linkedinButton: "🔗 LinkedIn",
@@ -115,6 +121,13 @@ export const spanishTexts = {
   breakoutDescription: "Una recreación en Python del clásico juego Breakout de un curso de Stanford. Fue mi primera vez haciendo algo con programación gráfica - ¡ver esos ladrillos romperse nunca pasa de moda!",
   breakoutChallenge: "Conseguir que la detección de colisiones funcionara correctamente fue complicado, pero muy satisfactorio una vez que funcionó. Este proyecto me mostró cómo los juegos gestionan el estado y manejan la entrada del usuario en tiempo real.",
   breakoutTech: "Construido con: Python, graphics.py.",
+
+  // Calculator
+  calculatorTitle: 'Calculadora',
+  calculatorDescription: 'Una calculadora moderna y sencilla hecha con HTML, CSS y JavaScript.',
+  calculatorChallenge: 'Reto: aplicar lógica, operaciones con decimales, entrada por teclado y una interfaz limpia.',
+  calculatorTech: 'Construido con: HTML, CSS, JavaScript, Netlify',
+
 
   contactDescription: "¿Tienes una idea para un proyecto o simplemente quieres hablar de tecnología?<br>Me encantaría saber de ti - envíame un mensaje o conéctemos en LinkedIn.",
   emailButton: "✉️ Enviar Email",
